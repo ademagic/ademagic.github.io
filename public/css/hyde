@@ -286,10 +286,8 @@ a:hover {
     font-size: 18px;
   }
   .masthead h1 {
-    font-size: 1.8rem;
-  
-    text-align: center;
-}
+    font-size: 50px;
+  }
 
   /* Center container in available real estate */
   .container {
@@ -314,10 +312,8 @@ a:hover {
     left: 0;
   }
   .masthead .lead {
-    font-size: 1.2rem;
-  
-    text-align: center;
-}
+    font-size: 24px;
+  }
   .colophon {
     margin-top: 40px;
   }
