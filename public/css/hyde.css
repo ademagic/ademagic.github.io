@@ -52,19 +52,19 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 40px;
+  font-size: 30px;
 }
 h2 {
-  margin-top: 20px;
-  font-size: 32px;
+  margin-top: 18px;
+  font-size: 22px;
 }
 h3 {
-  margin-top: 24px;
-  font-size: 24px;
+  margin-top: 18px;
+  font-size: 18px;
 }
 h4, h5, h6 {
-  margin-top: 16px;
-  font-size: 16px;
+  margin-top: 14px;
+  font-size: 14px;
 }
 
 p {
@@ -74,9 +74,7 @@ p {
 ul, ol {
   padding: 0;
   margin: 0 0 15px;
-}
-li {
-  color: #888580;
+  list-style: inside;
 }
 
 hr {
@@ -172,23 +170,24 @@ img {
 
 a {
   font-weight: 600;
-  color: #222;
+  color: #2559FF;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
+h1 a {
+  color: #222;
+}
+
+
+
 
 /* Scaffolding
 -------------------------------------------------- */
 
 /* Header */
-.masthead {
-  color: #3a3a3a;
-  border-right: 1px solid #efefef;
-  /* background-color: #2a2a2a; */
-}
 .masthead-inner {
   padding: 20px;
 }
@@ -201,18 +200,14 @@ a:hover {
   font-weight: 300;
   margin-bottom: 0;
 }
-.masthead a {
-  color: #fff;
-}
 
 /* Footer area of masthead */
 .colophon {
   margin-top: 20px;
-  color: #7a7a7a;
 }
 .colophon-links {
   margin: 0 0 15px;
-  list-style: none;
+  list-style: none outside none;
 }
 
 
@@ -271,6 +266,9 @@ a:hover {
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+  .masthead {
+    border-bottom: 1px solid #efefef;
+  }
   .masthead-inner {
     padding: 40px;
   }
@@ -287,9 +285,8 @@ a:hover {
   }
   .masthead h1 {
     font-size: 1.8rem;
-  
     text-align: center;
-}
+  }
 
   /* Center container in available real estate */
   .container {
@@ -306,6 +303,8 @@ a:hover {
     bottom: 0;
     width: 25%;
     margin-bottom: 0;
+    border-right: 1px solid #efefef;
+    border-bottom: 0;
   }
   .masthead-inner {
     position: absolute;
