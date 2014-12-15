@@ -10,8 +10,8 @@ relative_permalinks: true
 
 # Setup
 title:               'Miko Ademagic'
-tagline:             'UI Dev, Sydney'
-description:         'A Front End/UI Developer from Sydney Australia. Currently working his magic for <a href="http://www.bigcommerce.com">Bigcommerce</a>'
+tagline:             'Front End/UI Dev, Sydney'
+description:         'Front End/UI Dev, Sydney'
 url:                 miko.ademagic.com
 baseurl:             /
 paginate:            5

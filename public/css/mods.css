@@ -19,6 +19,7 @@ h1, h2 {
  * Masthead
  */
 
+/* TODO: FIX STICKY NAV
 .masthead {
   background-color: #fff;
   position: fixed;
@@ -26,7 +27,7 @@ h1, h2 {
   right: 0;
   top: 0;
   margin-bottom: 0;
-}
+}*/
 
   .masthead-title {
     font-weight: 600;
@@ -52,7 +53,7 @@ h1, h2 {
 /*
  * Content
  */
-
+/*   TODO: FIX STICKY NAV
 .container.content {
   margin-top: 5.5rem;
-}
+}*/
