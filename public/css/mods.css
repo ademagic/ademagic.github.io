@@ -1,0 +1,58 @@
+/*
+ *  MODS TO POOLE AND LANYON
+ */
+
+html {
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", Georgia, Serif;
+  color: #555;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+/*
+ * Masthead
+ */
+
+.masthead {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-bottom: 0;
+}
+
+  .masthead-title {
+    font-weight: 600;
+  }
+
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Pagination
+ */
+
+.pagination {
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Content
+ */
+
+.container.content {
+  margin-top: 5.5rem;
+}
