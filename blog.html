@@ -4,7 +4,9 @@ title: Blog
 ---
 
 <div class="posts">
+  {% assign i = 0 %}
   {% for post in site.posts %}
+  {% assign i = i | plus: 1 %}
   <div class="post post-summary">
     <h2 class="post-title">
       <a href="{{ post.url }}">
@@ -14,10 +16,14 @@ title: Blog
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <p>{{ post.content | truncatewords:80 | strip_html }}</p>
+    {% if i == 1 %}
+    <p>{{ post.content | truncatewords:100 }}</p>
+    {% else %}
+    <p>{{ post.synopsis }}</p>
+    {% endif %}
     <div class="post-actions">
       <a href="{{ post.url }}">
-        Keep reading
+        Read on...
       </a>
     </div>
   </div>

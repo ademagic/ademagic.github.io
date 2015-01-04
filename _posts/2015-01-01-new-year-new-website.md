@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New Year, New Website
+synopsis: The state of my website on Jan 1, 2015. And my New Year's Resolution – At least 52 updates in 52 weeks? Can it be done?? Yes.
 ---
 
 Before I go on, happy 2015! Hope the new year brings you all the good stuff, and that you figure out what to do with it.
