@@ -2,6 +2,9 @@ body {
     background-color: #314455;
     color: white;
     font-family: sans-serif;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .layer {
@@ -24,14 +27,18 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 h1, h3, h5 {
     margin: 0;
+    line-height: 1.2;
 }
 
 .content {
-    font-size: 6vw;
+    font-size: 4vw;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
 
 ul {
@@ -50,6 +57,23 @@ a {
     color: #fff;
 }
 
+.shape {
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 80vh;
+    left: -25vw;
+    right: -25vw;
+    bottom: -25vh;
+}
+
+.shape.left {
+    transform: rotateZ(15deg);
+}
+
+.shape.right {
+    transform: rotateZ(-15deg);
+}
+
 .grid {
     display: grid;
     grid-gap: 0px;
@@ -57,10 +81,21 @@ a {
     grid-template-rows: 11.1vh 11.1vh 11.1vh;
     margin: 0 auto;
     width: 33.3vh;
+    -webkit-animation: rotateLogo 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: rotateLogo 5s infinite;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate3d(5, 5, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(5, 5, 5, 360deg);
+    }
 }
 
 .grid__item {
-    border: 1px solid #314455;
+    border: 1px solid transparent;
 }
 
 .grid__item:nth-of-type(odd) {
@@ -86,6 +121,6 @@ a {
 
 @media only screen and (min-width: 961px) {
     .content {
-        font-size: 48px;
+        font-size: 30px;
     }
 }
