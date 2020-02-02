@@ -1,0 +1,25 @@
+{
+  "name": "ademagic.github.io",
+  "version": "1.0.0",
+  "description": "This is the codebase for miko.ademagic.com, my home on the internet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "mkdir _site/style/ && cp style.css _site/style/style.css",
+    "dev": "npm run sass && npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ademagic/ademagic.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ademagic/ademagic.github.io/issues"
+  },
+  "homepage": "https://github.com/ademagic/ademagic.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
