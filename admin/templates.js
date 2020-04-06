@@ -769,18 +769,23 @@ context.addExport("pageType", t_4);
 }
 output += "\n\n";
 output += "\n";
-var t_5;
-t_5 = runtime.contextOrFrameLookup(context, frame, "title");
-frame.set("introHeading", t_5, true);
+(parentTemplate ? function(e, c, f, r, cb) { cb(""); } : context.getBlock("head"))(env, context, frame, runtime, function(t_6,t_5) {
+if(t_6) { cb(t_6); return; }
+output += t_5;
+output += "\n\n";
+output += "\n";
+var t_7;
+t_7 = runtime.contextOrFrameLookup(context, frame, "title");
+frame.set("introHeading", t_7, true);
 if(frame.topLevel) {
-context.setVariable("introHeading", t_5);
+context.setVariable("introHeading", t_7);
 }
 if(frame.topLevel) {
-context.addExport("introHeading", t_5);
+context.addExport("introHeading", t_7);
 }
 output += "\n";
-var t_6;
-t_6 = (function() {
+var t_8;
+t_8 = (function() {
 var output = "";
 output += "\n<p class=\"[ intro__meta ] [ text-500 leading-tight ]\">\n  ";
 if(runtime.contextOrFrameLookup(context, frame, "date")) {
@@ -792,23 +797,23 @@ output += "</time>\n  ";
 ;
 }
 output += "\n  <span>— ";
-output += runtime.suppressValue((lineno = 10, colno = 35, runtime.callWrap(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "helpers")),"getReadingTime"), "helpers[\"getReadingTime\"]", context, [runtime.contextOrFrameLookup(context, frame, "content")])), env.opts.autoescape);
+output += runtime.suppressValue((lineno = 14, colno = 35, runtime.callWrap(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "helpers")),"getReadingTime"), "helpers[\"getReadingTime\"]", context, [runtime.contextOrFrameLookup(context, frame, "content")])), env.opts.autoescape);
 output += " minute read</span>\n</p>\n";
 ;
 return output;
 })()
 ;
-frame.set("introSummary", t_6, true);
+frame.set("introSummary", t_8, true);
 if(frame.topLevel) {
-context.setVariable("introSummary", t_6);
+context.setVariable("introSummary", t_8);
 }
 if(frame.topLevel) {
-context.addExport("introSummary", t_6);
+context.addExport("introSummary", t_8);
 }
 output += "\n\n";
-(parentTemplate ? function(e, c, f, r, cb) { cb(""); } : context.getBlock("content"))(env, context, frame, runtime, function(t_8,t_7) {
-if(t_8) { cb(t_8); return; }
-output += t_7;
+(parentTemplate ? function(e, c, f, r, cb) { cb(""); } : context.getBlock("content"))(env, context, frame, runtime, function(t_10,t_9) {
+if(t_10) { cb(t_10); return; }
+output += t_9;
 output += "\n\n";
 output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "content")), env.opts.autoescape);
 output += "\n";
@@ -817,13 +822,26 @@ parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {
 cb(null, output);
 }
-})});
+})})});
+} catch (e) {
+  cb(runtime.handleError(e, lineno, colno));
+}
+}
+function b_head(env, context, frame, runtime, cb) {
+var lineno = 4;
+var colno = 3;
+var output = "";
+try {
+var frame = frame.push(true);
+output += "\n";
+cb(null, output);
+;
 } catch (e) {
   cb(runtime.handleError(e, lineno, colno));
 }
 }
 function b_content(env, context, frame, runtime, cb) {
-var lineno = 14;
+var lineno = 18;
 var colno = 3;
 var output = "";
 try {
@@ -832,15 +850,15 @@ output += "\n  <main id=\"main-content\" tabindex=\"-1\">\n    <article class=\"
 var tasks = [];
 tasks.push(
 function(callback) {
-env.getTemplate("partials/components/intro.njk", false, "layouts/post.njk", false, function(t_10,t_9) {
-if(t_10) { cb(t_10); return; }
-callback(null,t_9);});
+env.getTemplate("partials/components/intro.njk", false, "layouts/post.njk", false, function(t_12,t_11) {
+if(t_12) { cb(t_12); return; }
+callback(null,t_11);});
 });
 tasks.push(
 function(template, callback){
-template.render(context.getVariables(), frame, function(t_12,t_11) {
-if(t_12) { cb(t_12); return; }
-callback(null,t_11);});
+template.render(context.getVariables(), frame, function(t_14,t_13) {
+if(t_14) { cb(t_14); return; }
+callback(null,t_13);});
 });
 tasks.push(
 function(result, callback){
@@ -854,19 +872,19 @@ output += " text-500 ] [ sf-flow ] [ e-content ]\">\n        ";
 output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "content")), env.opts.autoescape);
 output += "\n      </div>\n      ";
 if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "site")),"enableThirdPartyComments")) {
-output += "\n        <hr />\n        <aside class=\"[ post__body ] [ inner-wrapper ] [ pad-bottom-900 text-500 ]\">\n          ";
+output += "\n        <aside class=\"[ post__body ] [ inner-wrapper ] [ pad-bottom-900 text-500 ]\">\n          ";
 var tasks = [];
 tasks.push(
 function(callback) {
-env.getTemplate("partials/global/third-party-comments.njk", false, "layouts/post.njk", false, function(t_14,t_13) {
-if(t_14) { cb(t_14); return; }
-callback(null,t_13);});
+env.getTemplate("partials/global/third-party-comments.njk", false, "layouts/post.njk", false, function(t_16,t_15) {
+if(t_16) { cb(t_16); return; }
+callback(null,t_15);});
 });
 tasks.push(
 function(template, callback){
-template.render(context.getVariables(), frame, function(t_16,t_15) {
-if(t_16) { cb(t_16); return; }
-callback(null,t_15);});
+template.render(context.getVariables(), frame, function(t_18,t_17) {
+if(t_18) { cb(t_18); return; }
+callback(null,t_17);});
 });
 tasks.push(
 function(result, callback){
@@ -881,23 +899,23 @@ output += "\n      ";
 if(runtime.contextOrFrameLookup(context, frame, "tags")) {
 output += "\n        <footer class=\"[ post__footer ] [ pad-top-500 pad-bottom-500 ]\">\n          <div class=\"[ inner-wrapper ] [ pad-top-500 ]\">\n            <div class=\"[ nav ] [ box-flex align-center ]\">\n              <h3 class=\"font-serif text-500 weight-mid\">Tags:</h3>\n              <ul class=\"[ nav__list ] [ box-flex align-center pad-left-400 ] [ p-category ]\">\n                ";
 frame = frame.push();
-var t_19 = runtime.contextOrFrameLookup(context, frame, "tags");
-if(t_19) {t_19 = runtime.fromIterator(t_19);
-var t_18 = t_19.length;
-for(var t_17=0; t_17 < t_19.length; t_17++) {
-var t_20 = t_19[t_17];
-frame.set("item", t_20);
-frame.set("loop.index", t_17 + 1);
-frame.set("loop.index0", t_17);
-frame.set("loop.revindex", t_18 - t_17);
-frame.set("loop.revindex0", t_18 - t_17 - 1);
-frame.set("loop.first", t_17 === 0);
-frame.set("loop.last", t_17 === t_18 - 1);
-frame.set("loop.length", t_18);
+var t_21 = runtime.contextOrFrameLookup(context, frame, "tags");
+if(t_21) {t_21 = runtime.fromIterator(t_21);
+var t_20 = t_21.length;
+for(var t_19=0; t_19 < t_21.length; t_19++) {
+var t_22 = t_21[t_19];
+frame.set("item", t_22);
+frame.set("loop.index", t_19 + 1);
+frame.set("loop.index0", t_19);
+frame.set("loop.revindex", t_20 - t_19);
+frame.set("loop.revindex0", t_20 - t_19 - 1);
+frame.set("loop.first", t_19 === 0);
+frame.set("loop.last", t_19 === t_20 - 1);
+frame.set("loop.length", t_20);
 output += "\n                  <li class=\"nav__item\">\n                    <a href=\"/tags/";
-output += runtime.suppressValue(t_20, env.opts.autoescape);
+output += runtime.suppressValue(t_22, env.opts.autoescape);
 output += "\">";
-output += runtime.suppressValue(t_20, env.opts.autoescape);
+output += runtime.suppressValue(t_22, env.opts.autoescape);
 output += "</a>\n                  </li>\n                ";
 ;
 }
@@ -914,6 +932,7 @@ cb(null, output);
 }
 }
 return {
+b_head: b_head,
 b_content: b_content,
 root: root
 };
