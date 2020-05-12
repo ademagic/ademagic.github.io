@@ -13,6 +13,27 @@
 	
   
   <entry>
+    <title>Release 2: Mostly Typography Updates</title>
+    <link href="http://ademagic.com/posts/release-2-typography-updates/"/>
+    <updated>2020-05-11T10:00:00+10:00</updated>
+    <id>http://ademagic.com/posts/release-2-typography-updates/</id>
+    <content type="html"><![CDATA[
+      <p>If you know me, you know I blame all my hangups in Design on how long it takes me to decide on typography. Here's me having a second (and probably not last) go at improving it.</p>
+<h3>Inline Code Blocks Facelift</h3>
+<p>You know, the <code>&lt;code/&gt;</code> ones. They already steal enough cognitive attention without also being huge and bold. Now they're the same size as the text, with a little extra breathing room. Also changed some of the colours around to make them a little more subtle.</p>
+<h3>Actual Font Weights</h3>
+<p>I thought I kept importing bad Google Fonts, when actually I was using the Fonts v1 API syntax with a v2 API request. D'oh, Miko.</p>
+<p>For now, I've imported two other weights for the Frank Ruhl Libre font family so that <strong>the strong tags</strong> have some more visual weight. More typography changes to come, I'm sure.</p>
+<h3>Credits Page</h3>
+<p>I really like <a href="https://dbanks.design" rel="external">Danny Banks</a>'s site, and I thought the idea of the open-source credits page was cool. So I've replaced the Hylia link in the footer with a link to my <a href="/credits">Credits</a> page. Hopefully more things make it on here as I go more crazy than just updating typography.</p>
+<p>Next one's the homepage, I swear.</p>
+<p>✌️</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
     <title>Zoom Etiquette</title>
     <link href="http://ademagic.com/posts/zoom-etiquette/"/>
     <updated>2020-04-02T11:00:00+11:00</updated>
