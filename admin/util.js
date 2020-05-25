@@ -4288,6 +4288,7 @@ var previewUtil = (function (exports) {
   };
 
   var entities$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
     Aacute: Aacute,
     aacute: aacute,
     Abreve: Abreve,
@@ -12024,7 +12025,9 @@ var previewUtil = (function (exports) {
             '\\"(?:(?!' + re.src_ZCc + '|["]).)+\\"|' +
             "\\'(?:(?!" + re.src_ZCc + "|[']).)+\\'|" +
             "\\'(?=" + re.src_pseudo_letter + '|[-]).|' +  // allow `I'm_king` if no pair found
-            '\\.{2,3}[a-zA-Z0-9%/]|' + // github has ... in commit range links. Restrict to
+            '\\.{2,4}[a-zA-Z0-9%/]|' + // github has ... in commit range links,
+                                       // google has .... in links (issue #66)
+                                       // Restrict to
                                        // - english
                                        // - percent-encoded
                                        // - parts of file path
@@ -12042,9 +12045,11 @@ var previewUtil = (function (exports) {
         '|\\/' +
       ')?';
 
+    // Allow anything in markdown spec, forbid quote (") at the first position
+    // because emails enclosed in quotes are far more common
     re.src_email_name =
 
-      '[\\-;:&=\\+\\$,\\"\\.a-zA-Z0-9_]+';
+      '[\\-;:&=\\+\\$,\\.a-zA-Z0-9_][\\-;:&=\\+\\$,\\"\\.a-zA-Z0-9_]*';
 
     re.src_xn =
 
@@ -12124,7 +12129,8 @@ var previewUtil = (function (exports) {
 
     re.tpl_email_fuzzy =
 
-        '(^|' + text_separators + '|\\(|' + re.src_ZCc + ')(' + re.src_email_name + '@' + re.tpl_host_fuzzy_strict + ')';
+        '(^|' + text_separators + '|"|\\(|' + re.src_ZCc + ')' +
+        '(' + re.src_email_name + '@' + re.tpl_host_fuzzy_strict + ')';
 
     re.tpl_link_fuzzy =
         // Fuzzy link can't be prepended with .:/\- and non punctuation.
