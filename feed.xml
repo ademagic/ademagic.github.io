@@ -13,6 +13,30 @@
 	
   
   <entry>
+    <title>Release 3: Back to work</title>
+    <link href="http://ademagic.com/posts/release-3-back-to-work/"/>
+    <updated>2020-06-01T10:00:00+10:00</updated>
+    <id>http://ademagic.com/posts/release-3-back-to-work/</id>
+    <content type="html"><![CDATA[
+      <p>Over the past 3 months or so I've had the luxury of spending a good chunk of time on my website. Voluntarily.</p>
+<p>I resigned from my role at Finder right before COVID and all the fun that came with it. Since then, I've been hammering away at code pretty hard, both to learn new things and to try and dust off the developer part of my brain. I'm excited to say that starting June 1, I will start my new role as Senior Front End Developer at <a target="_blank" href="https://www.innowell.org">InnoWell</a>.</p>
+<p>To commemorate the occasion, I added a bunch of stuff to the site. Some without much forethought. Enjoy.</p>
+<h3>About me: A Timeline</h3>
+<p>I gave my <a href="/about">About</a> page a little facelift, updated some copy, and in perhaps my cheesiest move, added a timeline of my career. The CSS was fun to build, and figuring out what to put in there was fun too. I'll likely add more animations and interactions to it in future. I also took that opportunity to learn a bit more about Eleventy's <a href="https://www.11ty.dev/docs/data-cascade/">Data Cascade</a>.</p>
+<h3>Removing dependency on the Hylia fork</h3>
+<p>Not a huge change, but the code's been pushed to a <a href="https://www.github.com/ademagic/site">fresh repo</a> which is no longer a fork (but a clone) of <a href="https://hylia.website">Hylia</a>. I updated the docs to reflect this. Mainly just makes my commit graph look prettier, but semantically makes sense because I'm completely diverging from the repo and not planning to merge back into canonical.</p>
+<h3>Socials component reworked</h3>
+<p>I use one partial to build the social icons in the footer, and on my about page. The socials data was statically added to the partial, but after learning about the Data Cascade, I realised I had a JSON data file where this stuff was nicely stored. I reworked it to use the social data and made some other minor visual updates to it. Also, I'm not looking for work anymore, so the title's gone.</p>
+<h3>Soundtracks!</h3>
+<p>I'm a big fan of music while I work, and while I do pretty much anything else. Since most of it's over Spotify, I thought it might be interesting to add a widget to the end of the post. I went and retrospectively added soundtracks to my other posts, too. If you like what I listen to, or think you could recommend something I'd enjoy, hit me up!</p>
+<h3>Fancy first letter styles</h3>
+<p>Like I said, no forethought. Why not?</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
     <title>5 Steps To Writing A Good Technical Test</title>
     <link href="http://ademagic.com/posts/tech-tests/"/>
     <updated>2020-05-23T10:00:00+10:00</updated>
