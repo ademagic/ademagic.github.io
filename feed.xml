@@ -4,7 +4,7 @@
 	<subtitle></subtitle>
 	<link href="http://ademagic.com/feed.xml" rel="self"/>
 	<link href="http://ademagic.com/"/>
-	<updated>2020-03-30T11:00:00+11:00</updated>
+	<updated>2021-08-25T00:00:00Z</updated>
 	<id>http://ademagic.com</id>
 	<author>
   <name>Miko Ademagic</name>
@@ -13,9 +13,29 @@
 	
   
   <entry>
+    <title>Release IV: A New Hope</title>
+    <link href="http://ademagic.com/posts/release-4-a-new-hope/"/>
+    <updated>2021-08-25T00:00:00Z</updated>
+    <id>http://ademagic.com/posts/release-4-a-new-hope/</id>
+    <content type="html"><![CDATA[
+      <p>I was contemplating rebuilding my website on a new platform for a while now. Mainly because I couldn't remember how to drive it, mainly because I forgot how to, mainly because didn't document it for myself. After thinking about it, I realised that those reasons weren't good enough. So here it is, the first release in over a year.</p>
+<p>Besides, adapting to legacy systems is my (non-voluntary) jam. It's not impossible. I used to build on legacy tech in my T-16 back home.</p>
+<p>What copyright infringement?</p>
+<h3>Replacing Commento with Disqus</h3>
+<p>I removed <a href="https://commento.io/">Commento</a>. It's a lightweight and minimal embeddable comments widget that you should get behind if you can. It doesn't sell your data, show you ads or any other modern internet stuff. I love it. But, given that it costs $USD, the $AUD wasn't having a good time, and more than anything <em>nobody was using it</em>, I decided to end my subscription. A long time ago. I just didn't remove it til now.</p>
+<p>I replaced it with <a href="https://disqus.com">Disqus</a>, and updated the <a href="/credits">Credits</a> page accordingly. I'm looking forward to swapping back one day.</p>
+<h3>The usual typography changes</h3>
+<p>I replaced my Permanent Marker heading font with a very bold, very italic version of Chivo. I like the big blocky minimalist look of it, hoping it will inspire a redesign. While I was at it, I also replaced Frank Ruhl Libre with Kaisei Tokumin. Honestly, this was just filler work. More changes soon, I hope.</p>
+<p>✌️</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
     <title>Release 3: Back to work</title>
     <link href="http://ademagic.com/posts/release-3-back-to-work/"/>
-    <updated>2020-06-01T10:00:00+10:00</updated>
+    <updated>2020-06-01T00:00:00Z</updated>
     <id>http://ademagic.com/posts/release-3-back-to-work/</id>
     <content type="html"><![CDATA[
       <p>Over the past 3 months or so I've had the luxury of spending a good chunk of time on my website. Voluntarily.</p>
@@ -39,7 +59,7 @@
   <entry>
     <title>5 Steps To Writing A Good Technical Test</title>
     <link href="http://ademagic.com/posts/tech-tests/"/>
-    <updated>2020-05-23T10:00:00+10:00</updated>
+    <updated>2020-05-23T00:00:00Z</updated>
     <id>http://ademagic.com/posts/tech-tests/</id>
     <content type="html"><![CDATA[
       <p>Technical tests are take-home (or in-person) excercises that allow developers to demonstrate their ability and approach. As an interviewee, proving you have the skills for the job can be nerve-racking (I've totally bottomed-out on more than one). As an interviewer it can be hard to ask the right questions, and to get the answer you're looking for.</p>
@@ -84,7 +104,7 @@
   <entry>
     <title>Release 2: Mostly Typography Updates</title>
     <link href="http://ademagic.com/posts/release-2-typography-updates/"/>
-    <updated>2020-05-11T10:00:00+10:00</updated>
+    <updated>2020-05-11T00:00:00Z</updated>
     <id>http://ademagic.com/posts/release-2-typography-updates/</id>
     <content type="html"><![CDATA[
       <p>If you know me, you know I blame all my hangups in Design on how long it takes me to decide on typography. Here's me having a second (and probably not last) go at improving it.</p>
@@ -105,7 +125,7 @@
   <entry>
     <title>Zoom Etiquette</title>
     <link href="http://ademagic.com/posts/zoom-etiquette/"/>
-    <updated>2020-04-02T11:00:00+11:00</updated>
+    <updated>2020-04-02T00:00:00Z</updated>
     <id>http://ademagic.com/posts/zoom-etiquette/</id>
     <content type="html"><![CDATA[
       <p><img src="/images/zoom-etiquette/digital_transformation_covid.jpg" alt="Who led the digital transformation of your company? The C.E.O, C.T.O or Covid-19?" title="Be honest. Image from somewhere on twitter, if you know the original source please let me know."></p>
@@ -155,7 +175,7 @@
   <entry>
     <title>Release 1: The First Fixes</title>
     <link href="http://ademagic.com/posts/release-1-the-first-fixes/"/>
-    <updated>2020-04-01T11:00:00+11:00</updated>
+    <updated>2020-04-01T00:00:00Z</updated>
     <id>http://ademagic.com/posts/release-1-the-first-fixes/</id>
     <content type="html"><![CDATA[
       <p>That's what I get for not testing my website more thoroughly. But, like I said, MVP. Heck, this isn't even the design I wanted to release with, so that should tell you something.</p>
@@ -180,7 +200,7 @@ The next few deployments should actually contain new features this time. I tried
   <entry>
     <title>Hello, World! Again!</title>
     <link href="http://ademagic.com/posts/welcome/"/>
-    <updated>2020-03-30T11:00:00+11:00</updated>
+    <updated>2020-03-30T00:00:00Z</updated>
     <id>http://ademagic.com/posts/welcome/</id>
     <content type="html"><![CDATA[
       <p>Very original, I know. Especially because this isn't the first iteration of my website and I bet I've probably used this same line before, even in iterations that never saw the light of the internet. If anything, I'm consistent.</p>
