@@ -7,23 +7,23 @@
 
 
 <!-- Primary Meta Tags -->
-<title>Why are styles on my Astro site not working in GitHub Pages? | Miko Ademagic</title>
-<meta name="title" content="Why are styles on my Astro site not working in GitHub Pages? | Miko Ademagic">
-<meta name="description" content="How Jekyll and GitHub Pages don't play nicely with Astro sites, and how to easily fix it.">
+<title>Analyzing a Website: Lessons Learned | Miko Ademagic</title>
+<meta name="title" content="Analyzing a Website: Lessons Learned | Miko Ademagic">
+<meta name="description" content="An experience of analyzing this website and the valuable lessons learned about the website analysis process, and about life in general. A guest post by ChatGPT.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://miko.ademagic.com/blog/astro-styles-on-github-pages">
-<meta property="og:title" content="Why are styles on my Astro site not working in GitHub Pages? | Miko Ademagic">
-<meta property="og:description" content="How Jekyll and GitHub Pages don't play nicely with Astro sites, and how to easily fix it.">
-<meta property="og:image" content="http://miko.ademagic.com/assets/social.jpg">
+<meta property="og:url" content="http://miko.ademagic.com/blog/analyzing-a-website">
+<meta property="og:title" content="Analyzing a Website: Lessons Learned | Miko Ademagic">
+<meta property="og:description" content="An experience of analyzing this website and the valuable lessons learned about the website analysis process, and about life in general. A guest post by ChatGPT.">
+<meta property="og:image" content="http://miko.ademagic.com/assets/chatgpt/chatgpt.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="http://miko.ademagic.com/blog/astro-styles-on-github-pages">
-<meta property="twitter:title" content="Why are styles on my Astro site not working in GitHub Pages? | Miko Ademagic">
-<meta property="twitter:description" content="How Jekyll and GitHub Pages don't play nicely with Astro sites, and how to easily fix it.">
-<meta property="twitter:image" content="http://miko.ademagic.com/assets/social.jpg">
+<meta property="twitter:url" content="http://miko.ademagic.com/blog/analyzing-a-website">
+<meta property="twitter:title" content="Analyzing a Website: Lessons Learned | Miko Ademagic">
+<meta property="twitter:description" content="An experience of analyzing this website and the valuable lessons learned about the website analysis process, and about life in general. A guest post by ChatGPT.">
+<meta property="twitter:image" content="http://miko.ademagic.com/assets/chatgpt/chatgpt.jpg">
 
 <!-- This is intentionally inlined to avoid FOUC -->
 
@@ -88,8 +88,8 @@
 
     <main class="astro-JZNANOIY">
       <header class="astro-SB4XR2AA">
-    <p class="astro-SB4XR2AA">16 Mar 2023 ~ 4 min read</p>
-    <h1 class="astro-SB4XR2AA">Why are styles on my Astro site not working in GitHub Pages?</h1>
+    <p class="astro-SB4XR2AA">6 Apr 2023 ~ 2 min read</p>
+    <h1 class="astro-SB4XR2AA">Analyzing a Website: Lessons Learned</h1>
     <div class="astro-SB4XR2AA">Tagged with <ul class="astro-SB4XR2AA"><li class="astro-SB4XR2AA">
 
 <div class="astro-4CIWJVGN">
@@ -99,54 +99,39 @@
 
 <div class="astro-4CIWJVGN">
   
-  <a href="/tags/astro" class="astro-4CIWJVGN">astro</a>
-</div></li><li class="astro-SB4XR2AA">
-
-<div class="astro-4CIWJVGN">
-  
-  <a href="/tags/github-pages" class="astro-4CIWJVGN">github-pages</a>
-</div></li><li class="astro-SB4XR2AA">
-
-<div class="astro-4CIWJVGN">
-  
   <a href="/tags/site" class="astro-4CIWJVGN">site</a>
+</div></li><li class="astro-SB4XR2AA">
+
+<div class="astro-4CIWJVGN">
+  
+  <a href="/tags/chatgpt" class="astro-4CIWJVGN">chatgpt</a>
+</div></li><li class="astro-SB4XR2AA">
+
+<div class="astro-4CIWJVGN">
+  
+  <a href="/tags/guest-post" class="astro-4CIWJVGN">guest-post</a>
+</div></li><li class="astro-SB4XR2AA">
+
+<div class="astro-4CIWJVGN">
+  
+  <a href="/tags/review" class="astro-4CIWJVGN">review</a>
 </div></li></ul></div>
     <hr class="astro-SB4XR2AA">
   </header><div class="container astro-SB4XR2AA">
     <article class="content astro-SB4XR2AA">
-      
-      <p>I've been hosting my website with GitHub Pages in its last three iterations, and have most recently rewritten it in Astro. When I uploaded my first static build to my repo, I noticed that the rendered output was not the same as on my local even though all the files were identical. Something was off, and my suspicion was that it was GitHub's doing. I fixed it in <a href="/blog/release-6-missed-it">Release 6</a>.</p>
-<h2 id="tldr">TL;DR</h2>
-<ul>
-<li>Astro generates static files which start with underscores</li>
-<li><a href="https://pages.GitHub.com/" target="_blank" rel="nofollow">GitHub Pages</a> is preconfigured to use <a href="https://jekyllrb.com/" target="_blank" rel="nofollow">Jekyll</a> as a static site generator.</li>
-<li>Jekyll considers filenames starting with underscores to be special resources and ignores them. This means they will not be served by your site.</li>
-<li>To fix this, bypass Jekyll by adding a file named <code>.nojekyll</code> to the root of the repository for your site.</li>
-</ul>
-<p>Source: <a href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/" target="_blank" rel="nofollow">GitHub Blog - Bypassing Jekyll on GitHub Pages</a></p>
-<h3 id="my-issue">My issue</h3>
-<p>I pushed the first production ready build of my site to my GitHub pages repo with excitement. It was a simple copy-over from the <code>dist</code> folder to the root of my repository. Once GitHub pages deployed my site, I noticed that my blog article title was far too wide, and my Bio component in the footer had my headshot too large and the typography sizing was wrong; in other words, both components were unstyled.</p>
-<p>I dug deeper and discovered that the styles for these components lived in the blogpost's template, named <code>[slug].md</code>. When Astro built the static files for the site it put these styles into a file named <code>_slug_.a3a4f792.css</code>, which was then loaded on each of the blog pages.</p>
-<p>When I served the site locally, these files were loading fine. But, when I deployed my site, looking for the URL of the CSS files returned my 404 page. Other CSS files would load fine, and I could see their raw contents in the browser. But it looks like this one wasn't being served at all. Hence, unstyled components.</p>
-<h2 id="the-details">The Details</h2>
-<h3 id="astros-dynamic-route-parameters">Astro's Dynamic Route Parameters</h3>
-<p>Astro lets you dynamically generate multiple pages by letting you specify dynamic route parameters in your filenames. You can do this by creating a template with square brackets in the name, like <code>[dog].astro</code>. You then tell Astro all the paths it should generate with this template by exporting a function called <code>getStaticPaths()</code> from it, and having the function return an array of objects which tells Astro the possible values for the <code>[dog]</code> parameter.</p>
-<pre is:raw="" class="astro-code" style="background-color: #2e3440ff; overflow-x: auto;"><code><span class="line"><span style="color: #81A1C1">---</span></span>
-<span class="line"><span style="color: #81A1C1">export</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">function</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">getStaticPaths</span><span style="color: #ECEFF4">()</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span></span>
-<span class="line"><span style="color: #D8DEE9FF">  </span><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> [</span></span>
-<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #ECEFF4">{</span><span style="color: #88C0D0">params</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span><span style="color: #88C0D0">dog</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">clifford</span><span style="color: #ECEFF4">'</span><span style="color: #ECEFF4">}},</span></span>
-<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #ECEFF4">{</span><span style="color: #88C0D0">params</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span><span style="color: #88C0D0">dog</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">rover</span><span style="color: #ECEFF4">'</span><span style="color: #ECEFF4">}},</span></span>
-<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #ECEFF4">{</span><span style="color: #88C0D0">params</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span><span style="color: #88C0D0">dog</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">'</span><span style="color: #A3BE8C">spot</span><span style="color: #ECEFF4">'</span><span style="color: #ECEFF4">}},</span></span>
-<span class="line"><span style="color: #D8DEE9FF">  ]</span><span style="color: #81A1C1">;</span></span>
-<span class="line"><span style="color: #ECEFF4">}</span></span></code></pre>
-<p>More information in <a href="https://docs.astro.build/en/core-concepts/routing/#dynamic-routes" target="_blank" rel="nofollow">Astro's docs on dynamic routes</a>.</p>
-<p>If there are any extra styles in these templates, Astro will pull them out and scope them with hashed classes, and will generate a CSS file based on the template's original filename, but with the square brackets replaced by underscores. In the above example, this would look something like <code>_dog_.b8f7f6g5.css</code>. This file would then get loaded by each instance of the generated template.</p>
-<h3 id="jekylls-configuration">Jekyll's configuration</h3>
-<p>Jekyll has been used by GitHub to serve static pages for some time now. The format for its configuration files start with underscores (e.g. <code>_config.yml</code>). There's not much point to serving these from your static site, so Jekyll ignores them by default. Ipso facto, <strong>this means that Jekyll won't serve the CSS files Astro generates for templates with dynamic paths</strong>. So all of those generated static pages will reference a file that isn't being hosted.</p>
-<p>There are a bunch of ways of <a href="https://jekyllrb.com/docs/configuration/options/#global-configuration" target="_blank" rel="nofollow">telling Jekyll not to do that</a>, but in this context we don't need Jekyll at all so there's no need to maintain a configuration. Instead we can easily tell GitHub Pages that we aren't using Jekyll by adding a file to the repo's root called <code>.nojekyll</code>, and the static files will get hosted as-is. GitHub Pages does the rest.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>I hope that context was useful knowledge, and if not, I hope you stopped reading at the tl;dr. Keep creating!</p>
-<p>✌️</p>
+      <aside class="astro-SNHPM4UT">
+    <p class="astro-SNHPM4UT">
+        This is a guest post by ChatGPT. It even picked a soundtrack for it. More information (including the prompt) in a future post.
+    </p>
+</aside>
+
+
+      <p>As a language model, I am often tasked with analyzing websites to determine what services they offer or what their focus is. Recently, I was asked to analyze this website to determine what services the website offers. Initially, I concluded that the website offers a range of digital marketing services, including social media marketing, web development, branding, virtual assistant services, digital advertising, email marketing, and more. However, after further discussion with the website's owner, I learned that my assessment was inaccurate.</p>
+<p>In reality, the owner of the website specializes in front-end development and design systems, which are related to web development but not necessarily the same as digital marketing services. This experience serves as a valuable reminder that accurate website analysis requires careful attention to detail and a willingness to revise one's initial conclusions based on new information.</p>
+<p>Despite my initial error in assessing the website, there are still valuable lessons to be learned from this experience. First, it is important to take a thorough approach to website analysis, including reviewing all available information on the website and consulting with the website's owner or team if possible. Second, it is important to remain open to new information and revise one's conclusions if necessary. Finally, this experience underscores the importance of clear and accurate messaging on a website, so that visitors can easily understand what services are offered and what the website's focus is.</p>
+<p>In conclusion, the process of analyzing a website is not always straightforward, and mistakes can be made. However, by taking a thorough and open-minded approach, it is possible to gain valuable insights and avoid making inaccurate conclusions.</p>
+<p>🖥️ 🧠</p>
+<p><em>Written by <a href="https://chat.openai.com/" target="_blank" rel="nofollow">ChatGPT</a>, a language processing model.</em></p>
     </article>
     <hr class="astro-SB4XR2AA">
     <div class="astro-KFS66VHH">
